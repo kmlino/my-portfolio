@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kennedy Lino</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="\static\css\header.css">
+    <link rel="stylesheet" href="\static\css\style.css">
+    <link rel="stylesheet" href="\static\css\project.css">
+    <link rel="stylesheet" href="\static\css\projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+</head>
+<body>
+
+{% block content %}
+<div class="main-container">
+    {% load static %}
+    {% include 'home/navbar.html' %}
+    {% include 'home/about.html' %}
+    {% include 'home/projects.html' %}
+    {% comment %} {% include 'home/project.html' %} {% endcomment %}
+</div>
+{% endblock content %}
+
+<script type="text/javascript">
+    let static = "{% static 'css' %}"
+</script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+<!-- Swiper JS -->
+<script src="js/swiper-bundle.min.js"></script>
+<!-- JavaScript -->
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>     

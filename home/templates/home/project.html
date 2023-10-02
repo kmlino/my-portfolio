@@ -1,0 +1,33 @@
+{% comment %} {% block content %}
+    <section id="teste_p">
+        <h2>teste_p</h2>
+        {% for p in projects %}
+            <h2>{{ p.name }}</h2>
+        {% endfor %}
+        {% url 'project' %}
+        <h2>{{ projects.objects.all() }}</h2>
+    </section>
+{% endblock %} {% endcomment %}
+
+{% block content %}
+<h1 style="text-align:center">My projects</h1>
+{% for p in projects %}
+    <div class="card-box">
+        <div class="card-project">
+        <h4 class="card-title">{{p.name}}</h4>
+        <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+        </div>
+        <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50"/>
+            </svg>
+        </div> 
+            <div class="card-text">
+                <p>{{p.description}}</p>
+            </div>
+        </div>
+    </div>
+{% endfor    %}
+{% endblock %}

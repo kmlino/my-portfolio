@@ -1,0 +1,292 @@
+/* .color1 { #160d18 };
+.color2 { #23145b };
+.color3 { #09456c };
+.color4 { #026f6e };
+.color5 { #1ca39e }; */
+
+
+/* 
+#0012B0
+#000B70
+#0119F0
+#0019FC
+
+*/
+
+*{padding: 0; margin: 0}
+
+body, input, textarea{
+    color: #dbdbdb;
+    font-family: 'Roboto Mono', monospace;
+}
+
+header, section {
+    height: 100vh;
+}
+
+.main-container {
+    background-color: #160d18;
+    /* background-image: url("/static/images/fundo.jpg"); */
+}
+
+.presentation {
+    position: relative;
+    top: 25%;
+    margin: 5%;
+    border-style: none;
+    display: inline-flex;
+    /* align-content: space-around; */
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.4s ease-in;
+}
+
+#card-person {
+    float: left;
+    width: 48%;
+    /* text-shadow: 2px 3px 5px #026f6e; */
+}
+
+#card-person img {
+    width: 75%;
+    /* border-radius: 50%; */
+    border-style: none;
+}
+
+#card-person img:hover {
+    background-color:#026f6da6;
+    transform: translateY(-1px);
+    transition: 0.4s ease-in-out;
+}
+
+#card-text {
+    float: right;
+    width: 45%;
+    text-align: left;
+    /* text-shadow: 2px 3px 5px #23145b; */
+    font-size: 18px;
+}
+
+.hire-me {
+    display: inline-flex;
+    border-radius: 10px;
+    border-style: none;
+    float: right;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 25%;
+    margin: 2%
+}
+
+/* .hire-me:hover {
+    background-color: #23145b;
+} */
+
+/* .hire-me a {
+    color: #026f6e;
+    text-decoration: none;
+} */
+
+.hire-me li {
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.hire-me li:hover {
+    transform: translateY(-2px);
+    rotate: 360deg;
+    transition: 0.5s ease-in-out;
+}
+
+.hire-me-btns {
+    background-color: transparent;
+    font-size: 2rem;
+    width: 100%; 
+}
+
+.fa-linkedin {
+    color: #004cbe;
+}
+.fa-whatsapp {
+    color: green;
+}
+.fa-envelope {
+    color: #0058aa;
+}
+.fa-github {
+    color: #4c2bdf;
+}
+
+.contact {
+    width: 100%;
+}
+
+.bottom-btn {
+    padding: 7px;
+    margin: 2px;
+    width: 74%;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: large;
+    background-color: #026f6e;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* @keyframes chcolor {
+    from {background-color: #1ca39e;}
+    to {background-color: #026f6e;}
+} */
+
+.bottom-btn:hover {
+    /* transition-duration: 0.9s; */
+    background-color: transparent;
+    border-style: solid ;
+    border-color: #026f6e;
+    color: #026f6e;
+}
+
+.bottom-btn a:hover {
+    color: #026f6e;
+}
+
+/* ABOUT */
+
+.about-me {
+    margin-top: 14%;
+    border-style: none;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.about {
+    float: left;
+    width: 40%;
+    border-style:none;
+    text-align: start;
+    margin-left: 10%;
+}
+
+.about h2 {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+@keyframes shad {
+    from {color: #1ca39e;}
+    to {color:white;}
+}
+
+.about p {
+    font-size: medium;
+}
+
+.about p::first-letter {
+    font-size: 200%;
+    color:#026f6e
+}
+.downloads {
+    margin: auto;
+    float: right;
+    width: 30%;
+    /* border-left: 1px solid; */
+    padding-left: 2%;
+}
+
+.downloads img {
+    height: auto;
+    width: 100%;
+}
+
+.btn-about {
+    text-decoration: none;
+    width: 100%;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: bold;
+    font-size: medium;
+    background-color: #1ca39e;
+    cursor: pointer;
+}
+
+.btn-about a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.img-about {
+    width: 10%;
+}
+
+.resume-about {
+    display: flex;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .presentation {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .card {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .card #card-person {
+        text-align: end;
+    }
+    .hire-me {
+        margin-top: 10%;
+        width: 35%;
+    }
+    .about-me {
+        margin-top: 0;
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+    .about {
+        width: 80%;
+    }
+    .downloads {
+        margin-top: 5%;
+        width: 40%;
+        border-style: none;
+    }
+    #card-person img {
+        width: 60%;
+        margin-right: 1%;
+    }
+    #card-text {
+        width: 48%;
+        font-size: 14px;
+    }
+    #menu {
+        top: 15%;
+    }
+   
+}

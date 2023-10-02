@@ -1,0 +1,59 @@
+{% comment %} {% extends 'home/index.html' %} {% endcomment %}
+
+{% block content %}
+
+<section>
+  <h1 style="text-align:center">My projects</h1>
+      <div class="card-box">
+        {% for p in projects %}
+          <div class="card-project">
+            <h4 class="card-title">{{p.name}}</h4>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="card-text">
+                <p>{{p.description}}</p>
+            </div>
+            <div class="card-button">
+                <a href="#" id="card-btn">Saiba mais!</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+</section>
+{% endblock content %}
+
+
+{% comment %} {% block content %}
+
+<section>
+  <h1 style="text-align:center">My projects</h1>
+      <div class="card-box">
+        {% for p in projects %}
+        <div class="slide-container swiper">
+          <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+                  <div class="card-main swiper-slide">
+                      <div class="image-content">
+                          <span class="overlay"></span>
+                          <div class="card-image">
+                              <!--<img src="images/profile1.jpg" alt="" class="card-img">-->
+                          </div>
+                      </div>
+                      <div class="card-content">
+                          <h2 class="name">{{p.name}}</h2>
+                          <p class="description">{{p.description}}</p>
+                          <button class="button">View More</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        {% endfor %}
+      </div>
+</section>
+{% endblock content %} {% endcomment %}

@@ -1,0 +1,27 @@
+{% comment %} {% extends 'home/index.html' %} {% endcomment %}
+
+{% block content %}
+{% load static %}
+<section id="sec_abt">
+    <div class="about-me">
+        <div class="about">
+            <div>
+                <h2>Quem sou eu?</h2>
+                <br>
+                <p> Desenvolvedor de software focado em tecnologias de Back End, tenho habilidades com Django e React para a web, e ArcGIS para dados epaciais (Postgis, Spatialite).<br/>
+                    Cativo uma mentalidade 'do it yourself', não temo os desafios, me alimento deles, sinto prazer na dor de aprender.<br/>
+                    Pra mim é satisfatório solucionar problemas através dos códigos, estou sempre em busca
+                    de afiar meu raciocínio lógico para usar com sabedoria as ferramentas que a tecnologia nos fornece.
+                </p>
+            </div>
+        </div>
+        <div class="downloads">
+            <img src="{% static 'images/me-at-work.jpeg' %}" alt="My photo">
+            <div class="resume-about">
+                <button class="btn-about"><a href="\static\arq\Kennedy-resume.pdf" download="Curriculo-Kennedy">Meu currículo!</a></button>
+                <button class="btn-about"><a href="\static\arq\Kennedy-resume.pdf" download="Curriculo-Kennedy">Contato!</a></button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content%}

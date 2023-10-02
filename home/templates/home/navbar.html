@@ -1,0 +1,48 @@
+{% load static %}
+<header>
+    <nav class="nav">
+        <div class="logo">
+            <a href="#">KENNEDY</a>
+        </div>
+        <div class="main_list" id="mainListDiv">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#sec_abt">About</a></li>
+                <li><a href="#project">my work</a></li>
+                <li><a href="#">dcontact</a></li>
+            </ul>
+        </div>
+        <div class="media_button">
+            <button class="main_media_button" id="mediaButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="presentation">
+        <div class="card">
+            <div id="card-person">
+                <img src="{% static 'images/kennedy-fundo-transp.png' %}" alt="My photo">
+                <h3>Back End Developer</h3>
+            </div>
+            <div id="card-text">
+                <h1>OLÁ!</h1>
+                <h3 style="color:#026f6e">Muito prazer,</h3>
+                <h2>Meu nome é</h2>
+                <h1 style="color:#026f6e">Kennedy</h1>
+            </div>
+        </div>
+        <div class="hire-me">
+            <div class="hire-me-btns">
+                <ul>
+                    <li><a href="https://wa.me/+5534996523996."><i class="fa fa-whatsapp"></i></a></li>
+                    <li><a href="mailto:kmlino@outlook.com"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/kennedy-lino-1522a2135/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/kmlino"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+            <a href="#" class="bottom-btn">CONTACT ME</a>
+        </div>
+    </div>
+</header> 
