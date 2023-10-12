@@ -93,15 +93,6 @@ header, section {
     margin: 2%
 }
 
-/* .hire-me:hover {
-    background-color: #23145b;
-} */
-
-/* .hire-me a {
-    color: #026f6e;
-    text-decoration: none;
-} */
-
 .hire-me li {
     list-style-type: none;
     display: inline-flex;

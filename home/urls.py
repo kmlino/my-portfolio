@@ -22,7 +22,6 @@ router.register(r'users', UserViewSet)
 urlpatterns = [
     path('', views.home_pg, name="home"),
     path('about/', views.about, name="about" ),
-    path('my_work/', views.my_work, name="my_work" ),
     path('project/', views.project, name="project" ),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

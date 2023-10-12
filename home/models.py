@@ -5,7 +5,5 @@ class Project(models.Model):
     year = models.DateField()
     description = models.TextField()
 
-    
     def __str__(self):
         return self.name
-
