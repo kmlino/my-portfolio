@@ -1,7 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets
 from django.core.paginator import Paginator
+from .serializers import ProjectSerializer
 from .models import Project
+
+class ProjectView(viewsets.ModelViewSet):
+    serializer_class = ProjectSerializer
+    queryset = Project.objects.all()
 
 def home_pg(request):
     projects = Project.objects.all()
@@ -9,17 +14,3 @@ def home_pg(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'home/index.html', context={'page_obj': page_obj})
-
-
-def about(request):
-    return render(request, 'home/about.html')
-
-
-# def my_work(request):
-#     return render(request, 'home/projects.html')
-
-
-def project(request):
-    pass
-    # projects = Project.objects.all()
-    # return render(request, 'home/projects.html', context={'projects': projects})
